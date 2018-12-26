@@ -1,0 +1,31 @@
+
+1. Starting the IPython controller and engines 
+	
+	https://ipython.org/ipython-doc/2/parallel/parallel_process.html
+	http://astropython.blogspot.com/2016/02/how-to-setup-ipython-parallel-cluster.html
+
+2. Parallel Computing with Python
+
+	https://github.com/rsnemmen/parallel-python-tutorial/blob/master/Parallel%20Computing%20with%20Python%20public.ipynb
+
+
+3. Overclock Rpi
+
+	https://howtoraspberrypi.com/how-to-overclock-raspberry-pi/
+
+
+4. Setting Up A Raspberry Pi Cluster
+
+	https://epcced.github.io/wee_archlet/
+
+5. Top 10 ML algorithms
+
+	https://www.dezyre.com/article/top-10-machine-learning-algorithms/202
+
+6. RPI GPIO
+
+	http://hertaville.com/introduction-to-accessing-the-raspberry-pis-gpio-in-c.html
+
+7. Android to Web
+
+	https://content.pivotal.io/blog/part-1-shifting-from-android-to-web-development
