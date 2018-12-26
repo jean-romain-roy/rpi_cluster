@@ -1,0 +1,12 @@
+1. Install librairies
+
+	sudo apt-get install apache2
+
+	sudo apt-get install php libapache2-mod-php
+
+
+2. Reboot
+
+3. Files can be found in : cd /var/www/html
+
+4. to start server : service apache2 status

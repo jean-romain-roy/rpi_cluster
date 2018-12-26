@@ -1,0 +1,8 @@
+Temp of cpu
+
+	cat /sys/class/thermal/thermal_zone*/temp
+
+
+CPU usage
+
+	top, 1

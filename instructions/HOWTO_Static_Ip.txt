@@ -1,0 +1,15 @@
+1. Login the Rpi
+
+2. Edit the file /etc/dhcpcd.conf by using : sudo nano /etc/dhcpcd.conf
+
+3. Scroll to the bottom of the script, and add the following lines
+
+	interface eth0
+
+	static ip_address=10.42.0.x/24 // set x to chosen value
+	static routers=10.42.0.1
+	static domain_name_servers=10.42.0.1
+
+4. Save and Exit
+
+5. Reboot

@@ -1,0 +1,38 @@
+How to format SD Card
+
+1. Open Gparted
+
+2. Select the right drive
+
+3. delete all partitions
+
+4. right click and select format fat32
+
+5. run all operations
+
+
+How to upload os img to sd card
+
+1. Download Raspbian Stretch Lite from https://www.raspberrypi.org/downloads/raspbian/
+
+2. Make sure the sha256 matches the name of the file :
+	sha256sum filename.zip
+
+3. Unzip the img
+
+4. We write down the name of the sd card by running :
+	sudo fdisk -l
+
+5. We unmount the sd card by running :
+	sudo umount /dev/sdb1
+
+6. We write the img to the sd card :
+	sudo dd bs=4M if=image_name.img of=/dev/sdb conv=fsync
+
+7. Wait for transfer to end
+
+8. Open boot partition
+
+9. add file named 'ssh' (no extension)
+
+

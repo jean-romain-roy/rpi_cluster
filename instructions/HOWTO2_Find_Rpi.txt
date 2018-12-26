@@ -1,0 +1,30 @@
+To connect rpi through ethernet cable : 
+
+1. Open Terminal 
+
+2. Enter nm-connection-editor
+
+3. Select the Ethernet connection
+
+4. Press on edit
+
+5. Go to IPv4 Settings tab
+
+6. Select Method Shared to other computers
+
+7. Save and exit all
+
+8. Check which address was given to Ethernet Port (ex : 10.42.0.1)
+
+9. Connect rpi via ethernet cable
+
+10. wait 2min
+
+11. Scan all Ip addresses by runing the command : nmap -n 10.42.0.255/24
+
+12. the rpi ip should be the one different from 10.42.0.1
+
+13. Connect by entering : ssh pi@10.42.0.xxx
+
+14. Password by default : raspberry
+
