@@ -2,24 +2,20 @@ RPI Setup
 
 1. SSH in Rpi
 
-2. Edit Hostname and Network location with : sudo raspi-config
+2. Edit Hostname, Password and Network location with : sudo raspi-config
 
-3. Update rpi os with : sudo rpi-update
+3. Reboot/Re-ssh : sudo reboot
 
-4. Reboot : sudo reboot
+4. Update rpi os with : sudo rpi-update
 
-5. Generate safe passwordless login files by using (keep pressing enter to skip options) : ssh-keygen -t rsa
+5. Reboot/Re-ssh : sudo reboot
 
 6. pull information about the latest versions of packages available : sudo apt-get update
 
 7. upgrade the installed software to its latest versions : sudo apt-get upgrade
 
+8. Install different packages : 
 
-Optional :
+	sudo apt-get install python3-pip
 
-8. install packages : 
-	sudo apt-get install sysbench
-	sudo apt-get install nmap
-
-
-9. to run sysbench write : sysbench --test=cpu --cpu-max-prime=2000 --num-threads=2 run
+	sudo pip install numpy scipy sklearn ipython ipyparallel

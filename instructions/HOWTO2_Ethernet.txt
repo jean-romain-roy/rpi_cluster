@@ -1,4 +1,4 @@
-To connect rpi through ethernet cable : 
+Once rpi is connected through ethernet cable : 
 
 1. Open Terminal 
 
@@ -16,7 +16,7 @@ To connect rpi through ethernet cable :
 
 8. Check which address was given to Ethernet Port (ex : 10.42.0.1)
 
-9. Connect rpi via ethernet cable
+9. Reconnect rpi via ethernet cable
 
 10. wait 2min
 

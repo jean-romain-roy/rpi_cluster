@@ -1,0 +1,25 @@
+To automate the cluster init sequence on the master node
+
+1. Create a new config : 
+	
+	ipython profile create --parallel --profile=rpi
+
+2. Edit the ipcluster config file :
+
+	sudo nano ~/.ipython/profile_rpi/ipcluster_config.py
+
+3. Change the engine launcher class by setting : 
+
+	c.IPClusterEngines.engine_launcher_class = 'SSHEngineSetLauncher'
+
+4. Set the IP address of the controller : 
+
+	c.IPClusterStart.controller_ip = '192.168.0.10'
+
+5. Define the dictionnary of engines to launch : 
+	
+	c.SSHEngineSetLauncher.engines = {'master' : 2,
+                                'slave1' : 4,
+                                'slave2' : 4}
+
+

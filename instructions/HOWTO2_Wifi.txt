@@ -1,0 +1,12 @@
+Once rpi is connected to the wifi router : 
+
+1. Open Terminal 
+
+2. Scan all Ip addresses by runing the command : nmap -n 192.168.0.0/24
+
+12. the rpi ip should be different from 192.168.0.1
+
+13. Connect by entering : ssh pi@192.168.0.xxx
+
+14. Password by default : raspberry
+
