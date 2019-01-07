@@ -15,12 +15,6 @@
 
 using namespace std;
 
-// Information Carrier
-uint32_t rasp1Status = 0;
-uint32_t rasp2Status = 0;
-uint32_t rasp3Status = 0;
-
-
 bool rasp1_Enabled = true;
 bool rasp2_Enabled = true;
 bool rasp3_Enabled = true;
@@ -40,10 +34,10 @@ int main(int argc, char *argv[]){
 		return -1;
 	}
 
-	rasp1 = gethostbyname("10.42.0.210");
+	rasp1 = gethostbyname("10.42.0.10");
 	
 	if (rasp1 == NULL) {
-		cout << "ERROR, Raspberry1 IP isn't valid (10.42.0.210)" << endl;
+		cout << "ERROR, Raspberry1 IP isn't valid (10.42.0.10)" << endl;
 		rasp1_Enabled = false;
 	}
 
@@ -69,10 +63,10 @@ int main(int argc, char *argv[]){
 		return -1;
 	}
 
-	rasp2 = gethostbyname("10.42.0.254"); // the server's ip
+	rasp2 = gethostbyname("10.42.0.11"); // the server's ip
 
 	if (rasp2 == NULL) {
-		cout << "ERROR, Raspberry2 IP isn't valid (10.42.0.254)" << endl;
+		cout << "ERROR, Raspberry2 IP isn't valid (10.42.0.11)" << endl;
 		rasp2_Enabled = false;
 	}	
 
@@ -98,10 +92,10 @@ int main(int argc, char *argv[]){
 		return -1;
 	}
 
-	rasp3 = gethostbyname("10.42.0.131"); // the server's ip
+	rasp3 = gethostbyname("10.42.0.12"); // the server's ip
 
 	if (rasp3 == NULL) {
-		cout << "ERROR, Raspberry3 IP isn't valid (10.42.0.131)" << endl;
+		cout << "ERROR, Raspberry3 IP isn't valid (10.42.0.12)" << endl;
 		rasp3_Enabled = false;
 	}	
 
@@ -156,6 +150,10 @@ int main(int argc, char *argv[]){
 
 		FD_ZERO(&set); 
 		FD_SET(sockets[index], &set); 
+
+		bool go = true;
+		int n = 0;
+		uint32_t temp = 0;
 		
 		int rv = select(sockets[index] + 1, &set, NULL, NULL, &timeout);
 		if (rv < 0){
@@ -163,17 +161,17 @@ int main(int argc, char *argv[]){
 
 		}else if (rv == 0){
 			// timeout, socket does not have anything to read
-			usleep(1000);
 
 		}else{
-			if(recv(sockets[index], &rasp1Status, sizeof(uint32_t), 0) < 0){
+
+			if(recv(sockets[index], &temp, sizeof(uint32_t), 0) < 0){
 				cout << "Couldnt receive Raspberry 1 status" << endl;
 				//return -1; // error
 			}
-			bitset<32> x1(rasp1Status);
+
 			tend = time(0); 
-			cout << "It took "<< difftime(tend, tstart) << " s" << endl;
-			cout << " Raspberry " << index << " : " << x1 << endl << endl;		
+			cout << "Time : "<< difftime(tend, tstart) << " s" << endl;
+			cout << " Raspberry " << index << " : " << temp << endl << endl;
 		}
 
 		index += 1;

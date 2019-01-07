@@ -6,7 +6,7 @@ On Master Node,
 
 2. Create a directory that you will share : sudo mkdir shared_dir
 
-3. Write down the location of this directory
+3. Write down the locatione of this directory
 
 4. Edit /etc/exports to configure your shares : sudo nano /etc/exports
 
