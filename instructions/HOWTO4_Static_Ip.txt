@@ -4,17 +4,14 @@ To set a static IP to each pi
 
 2. Scroll to the bottom of the script, and add the following lines
 
-	# IF ETHERNET CABLE
 	interface eth0
+	metric 302 // higher means low priority
 	static ip_address=10.42.0.x/24 // set x to chosen value
 	static routers=10.42.0.1
 	static domain_name_servers=10.42.0.1
 
-	# IF WIFI ROUTER
-	interface eth0
-	static ip_address=192.168.0.x/24 // set x to chosen value
-	static routers=192.168.0.1
-	static domain_name_servers=192.168.0.1
+	interface wlan0
+	metric 202 // higher means low priority
 
 3. Save and Exit
 

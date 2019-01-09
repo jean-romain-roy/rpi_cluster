@@ -1,0 +1,20 @@
+The Rpi 3 and 3b have wifi on chip, to connect to a neighboring wifi : 
+
+1. Scan wifi : sudo iwlist wlan0 scan
+
+2. Obtain the ESSID of the desired wifi
+
+3. Edit to config file : sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+4. Add the wifi login credentials at the bottom of the file : 
+
+	network={
+		ssid="The_ESSID_from_earlier"
+		psk="Your_wifi_password"
+	}
+
+5. Reboot
+
+6. To make sure its connected check if an ip address was given to wlan0 : ifconfig wlan0
+
+

@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
 			return -1; // error
 		}
 
-		sleep(1);
+		sleep(5);
 	}
 
 	// On ferme tous les services ouvert

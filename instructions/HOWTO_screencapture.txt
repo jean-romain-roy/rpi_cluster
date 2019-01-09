@@ -1,0 +1,1 @@
+while true; do scrot & sleep 2; done

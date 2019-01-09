@@ -34,10 +34,10 @@ int main(int argc, char *argv[]){
 		return -1;
 	}
 
-	rasp1 = gethostbyname("10.42.0.10");
+	rasp1 = gethostbyname("192.168.0.10");
 	
 	if (rasp1 == NULL) {
-		cout << "ERROR, Raspberry1 IP isn't valid (10.42.0.10)" << endl;
+		cout << "ERROR, Raspberry1 IP isn't valid (192.168.0.10)" << endl;
 		rasp1_Enabled = false;
 	}
 
@@ -63,10 +63,10 @@ int main(int argc, char *argv[]){
 		return -1;
 	}
 
-	rasp2 = gethostbyname("10.42.0.11"); // the server's ip
+	rasp2 = gethostbyname("192.168.0.11"); // the server's ip
 
 	if (rasp2 == NULL) {
-		cout << "ERROR, Raspberry2 IP isn't valid (10.42.0.11)" << endl;
+		cout << "ERROR, Raspberry2 IP isn't valid (192.168.0.11)" << endl;
 		rasp2_Enabled = false;
 	}	
 
@@ -92,10 +92,10 @@ int main(int argc, char *argv[]){
 		return -1;
 	}
 
-	rasp3 = gethostbyname("10.42.0.12"); // the server's ip
+	rasp3 = gethostbyname("192.168.0.12"); // the server's ip
 
 	if (rasp3 == NULL) {
-		cout << "ERROR, Raspberry3 IP isn't valid (10.42.0.12)" << endl;
+		cout << "ERROR, Raspberry3 IP isn't valid (192.168.0.12)" << endl;
 		rasp3_Enabled = false;
 	}	
 

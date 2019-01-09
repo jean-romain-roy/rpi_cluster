@@ -1,0 +1,9 @@
+1. Download ARM version of Ngrok and unzip
+
+2. copy to main dir inside master rpi
+
+3. Connect to your account by running ./ngrok authtoken 7TE5..
+
+4. Start HTTP tunnel on same port than jupyter notebook : ./ngrok http 8000
+
+5. We can then copy the forwarding http://... adress to tunnel in

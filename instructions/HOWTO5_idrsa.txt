@@ -15,16 +15,16 @@ The master should do these steps for every slave, in order to ssh without a pass
 7. Edit the config file and add all the information about each engine :
 
 	Host master			# name of controller
-		HostName 192.168.0.10
+		HostName 10.42.0.10
 		User pi
 
 	Host engine1			# name engine 1
-		HostName 192.168.0.11
+		HostName 10.42.0.11
 		Port 22
 		User pi
 
 	Host engine2			# name engine 2
-		Hostname 192.168.0.12
+		Hostname 10.42.0.12
 		Port 22
 		User pi
 
