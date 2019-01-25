@@ -1,4 +1,4 @@
-Once rpi is connected through ethernet cable : 
+Once rpi is connected through ethernet cable, do the following steps on your computer : 
 
 1. Open Terminal 
 

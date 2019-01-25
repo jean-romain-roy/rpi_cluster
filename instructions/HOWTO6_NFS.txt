@@ -22,10 +22,10 @@ On Slave nodes,
 
 1. Create a directory that will mirror the master's directory : sudo mkdir shared_dir
 
-2. Mount the Master's directory to your slave's directory : sudo mount 10.42.0.1:/path/to/master/dir/shared_dir /path/to/slave/dir/shared_dir 
+2. Mount the Master's directory to your slave's directory : sudo mount 10.42.0.10:/path/to/master/dir/shared_dir /path/to/slave/dir/shared_dir 
 
 3. Edit /etc/fstab to automatically mount the master's directory on bootup (man nfs pour voir les options) :
 
-	10.42.0.1:/home/jean-romain/shared_dir  /home/pi/shared_dir     nfs     nfsvers=4,noatime       0       0
+	10.42.0.10:/home/jean-romain/shared_dir  /home/pi/shared_dir     nfs     nfsvers=4,noatime       0       0
 
 4. Repeat for all slaves

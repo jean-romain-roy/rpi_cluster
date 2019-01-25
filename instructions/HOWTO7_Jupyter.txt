@@ -2,26 +2,26 @@ On the master node a jupyter notebook web server shoud be installed
 
 1. sudo apt install python3-pip
 
-2. sudo pip3 install jupyter matplotlib pandas
+2. sudo pip3 install numpy scipy sklearn ipython ipyparallel jupyter matplotlib pandas
+
+3. write : jupyter notebook --generate-config
 
 4. set password : jupyter notebook password
 
-5. edit /etc/rc.local : sudo nano /etc/rc.local
+5. sudo nano /home/pi/.jupyter/jupyter_notebook_config.py
 
-6. add the following line JUST BEFORE exit 0 :
-
-	su pi -c "jupyter notebook --no-browser --notebook-dir=/home/pi --port=80" &
-
-	su pi -c "ipcluster start --profile='rpi'" &
-
-7. write : jupyter notebook --generate-config
-
-8. sudo nano /home/pi/.jupyter/jupyter_notebook_config.py
-
-9. Uncomment and change two lines : 
+6. Uncomment and change two lines : 
 
 	c.NotebookApp.allow_origin = '*' #allow all origins
 
 	c.NotebookApp.ip = '0.0.0.0' # listen on all IPs
+
+7. edit /etc/rc.local : sudo nano /etc/rc.local
+
+8. add the following line JUST BEFORE exit 0 :
+
+	su pi -c "jupyter notebook --no-browser --notebook-dir=/home/pi --port=80" &
+
+	su pi -c "ipcluster start --profile='rpi'" &
 
 

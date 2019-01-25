@@ -14,8 +14,3 @@ RPI Setup
 
 7. upgrade the installed software to its latest versions : sudo apt-get upgrade
 
-8. Install different packages : 
-
-	sudo apt-get install python3-pip
-
-	sudo pip install numpy scipy sklearn ipython ipyparallel

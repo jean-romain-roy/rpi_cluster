@@ -10,7 +10,7 @@ The master should do these steps for every slave, in order to ssh without a pass
 
 5. Repeat for every devices (each engines and master)
 
-6. Create the following file ~/.ssh/config
+6. Create the following file : touch ~/.ssh/config
 
 7. Edit the config file and add all the information about each engine :
 

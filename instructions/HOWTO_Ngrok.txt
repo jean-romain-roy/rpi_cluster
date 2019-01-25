@@ -4,6 +4,6 @@
 
 3. Connect to your account by running ./ngrok authtoken 7TE5..
 
-4. Start HTTP tunnel on same port than jupyter notebook : ./ngrok http 8000
+4. Start HTTP tunnel on same port than jupyter notebook : ./ngrok http 80
 
 5. We can then copy the forwarding http://... adress to tunnel in

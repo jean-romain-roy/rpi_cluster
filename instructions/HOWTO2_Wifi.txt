@@ -1,4 +1,4 @@
-Once rpi is connected to the wifi router : 
+Once rpi is connected to the wifi router, do this on your own computer : 
 
 1. Open Terminal 
 

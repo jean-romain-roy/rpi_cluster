@@ -1,3 +1,5 @@
+This first tutorial is dedicated to downloading the OS and writing it to an executable USB drive
+
 How to format SD Card
 
 1. Open Gparted
