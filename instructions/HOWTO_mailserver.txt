@@ -1,0 +1,10 @@
+1. Install smtp server : sudo apt-get install ssmtp
+
+2. Then edit /etc/ssmtp/ssmtp.conf using nano
+
+3. comment out existing mailhub line and add the following lines :
+
+	mailhub=smtp.gmail.com:587
+	UseSTARTTLS=YES
+	AuthUser=<YOUR-EMAIL>@gmail.com
+	AuthPass=<YOUR-PASSWORD>
