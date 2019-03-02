@@ -11,6 +11,17 @@ float flowRate; // Calculated litres/hour
 unsigned long currentTime;
 unsigned long cloopTime;
 
+// Temp Sensor
+#include <OneWire.h> 
+#include <DallasTemperature.h>
+#define ONE_WIRE_BUS 3 
+
+// Setup a oneWire instance to communicate with any OneWire devices 
+OneWire oneWire(ONE_WIRE_BUS); 
+
+// Pass our oneWire reference to Dallas Temperature. 
+DallasTemperature sensors(&oneWire);
+
 // Water Flow Interrupt function
 void flowInterrupt (){
    flowCount++;
@@ -34,6 +45,9 @@ void setup(){
    // Time
    currentTime = millis();
    cloopTime = currentTime;
+
+   // Temp Library
+   sensors.begin(); 
 }
 
 void waterFlow(){
@@ -58,6 +72,13 @@ void ctCurrent(){
   Serial.println(calib*Irms*110, 2);  
 }
 
+void tempSensor(){
+  sensors.requestTemperatures(); // Send the command to get temperature readings 
+  
+  Serial.print("Temperature (C) : "); 
+  Serial.println(sensors.getTempCByIndex(0)); // Why "byIndex"?
+}
+
 void loop (){
 
   // Store current time
@@ -71,5 +92,6 @@ void loop (){
     
     waterFlow();
     ctCurrent();
+    tempSensor(); 
   }   
 }
